@@ -1,5 +1,6 @@
 FROM docker.oa.com:8080/public/golang:latest
-ADD beegotest $GOPATH/src
+ADD . $GOPATH/src/beegotest
+ADD 
 RUN mkdir -p /data/log/
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
