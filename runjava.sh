@@ -1,9 +1,11 @@
 #!/bin/bash
 
-cd $GOPATH/src/golang/beegotest
+cd $GOPATH/src/OpenUrl/src/pyrmont/
 
 mkdir -p /data/log/
+javac *.java
 
-go build  -o mytest
+cd $GOPATH/src/OpenUrl/
+jar cvfm  pyrmont.jar mymanifest -C src/ .
 
-./mytest
+java -jar pyrmont.jar
