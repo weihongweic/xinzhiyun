@@ -5,4 +5,4 @@ ADD run.sh /run.sh
 RUN chmod +x /run.sh
 EXPOSE 9090
 WORKDIR $GOPATH/src/beegotest
-CMD ["/run.sh"]
+CMD ["sleep", "infinity"]
