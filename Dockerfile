@@ -4,6 +4,6 @@ ADD ./git* $GOPATH/src/github.com
 RUN mkdir -p /data/log/
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
-EXPOSE 9090
+EXPOSE 8080
 WORKDIR $GOPATH/src/golang/beegotest
 CMD ["/run.sh"]
