@@ -1,0 +1,7 @@
+FROM docker.oa.com:8080/public/ceres-build:jdk8
+ADD ./OpenUrl $GOPATH/src/OpenUrl
+ADD runjava.sh /runjava.sh
+RUN chmod +x /runjava.sh
+EXPOSE 8080
+WORKDIR $GOPATH/src/OpenUrl
+CMD java -jar pyrmont.jar
